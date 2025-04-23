@@ -1,0 +1,47 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Virtual environment
+env/
+venv/
+ENV/
+.venv/
+.Python
+
+# macOS / Linux / Windows system files
+.DS_Store
+Thumbs.db
+
+# Editor/IDE files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Django
+db.sqlite3
+*.sqlite3
+*.log
+*.pot
+*.pyc
+*.mo
+media/
+staticfiles/
+static/
+
+# Migrations (ixtiyoriy - agar umumiy baham ko‘rilmaydigan bo‘lsa)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Secret config
+.env
+*.env
+config.yaml
+
+# PostgreSQL dump (agar kerak bo‘lsa)
+*.sql
+*.dump
