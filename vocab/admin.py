@@ -1,3 +1,5 @@
 from django.contrib import admin
+from .models import VocabularyWord, UserWordProgress
 
-# Register your models here.
+admin.site.register(VocabularyWord)
+admin.site.register(UserWordProgress)

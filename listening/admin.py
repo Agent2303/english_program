@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import ListeningTask, ListeningAnswer, ListeningQuestion
 
-# Register your models here.
+
+admin.site.register(ListeningTask)
+admin.site.register(ListeningAnswer)
+admin.site.register(ListeningQuestion)
+
+
