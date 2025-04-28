@@ -1,12 +1,12 @@
 from django.contrib import admin
 from django.urls import path, include
 from django.contrib.auth.decorators import user_passes_test
+from django.views.decorators.cache import never_cache
 
-def is_admin(user):
-    return user.is_authenticated and user.is_staff
+admin.site.login = never_cache(user_passes_test(lambda u: u.is_active and u.is_staff)(admin.site.login))
 
 urlpatterns = [
-    path('admin/', user_passes_test(is_admin)(admin.site.urls)),
+    path('admin/', admin.site.urls),
     path('api/auth/', include('users.urls')),
     path('api/vocab/', include('vocab.urls')),
     path('api/listening/', include('listening.urls')),
