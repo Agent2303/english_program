@@ -40,7 +40,7 @@ class VocabularyWord(models.Model):
 
 
 class ListeningQuestion(models.Model):
-    audio_url = models.URLField(max_length=200)  # URL to the audio file
+    audio = models.FileField()
     question_text = models.CharField(max_length=255)  # The question text
     choices = models.JSONField()  # A list of choices
     correct_answer = models.CharField(max_length=255)  # The correct answer

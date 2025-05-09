@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 
 class ListeningTask(models.Model):
     title = models.CharField(max_length=255)
-    audio_url = models.URLField()  # yoki FileField agar yuklansa
+    audio = models.FileField(upload_to='audio/')  # yoki FileField agar yuklansa
     transcript = models.TextField(blank=True)
 
     def __str__(self):

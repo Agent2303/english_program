@@ -11,7 +11,7 @@ class ListeningTaskSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = ListeningTask
-        fields = ['id', 'title', 'audio_url', 'transcript', 'questions']
+        fields = ['id', 'title', 'audio', 'transcript', 'questions']
 
 class ListeningAnswerSerializer(serializers.ModelSerializer):
     class Meta:

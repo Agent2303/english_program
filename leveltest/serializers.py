@@ -29,4 +29,4 @@ class VocabularyWordSerializer(serializers.ModelSerializer):
 class ListeningQuestionSerializer(serializers.ModelSerializer):
     class Meta:
         model = ListeningQuestion
-        fields = ['id', 'audio_url', 'question_text', 'choices', 'correct_answer']
+        fields = ['id', 'audio', 'question_text', 'choices', 'correct_answer']
